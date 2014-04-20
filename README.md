@@ -9,19 +9,25 @@ Pushes to master are moved to a branch, then a pull request is automatically cre
 
 This is the easy way (that gives me access to anything).
 
-1. Add `pull-to-master-bot` as a collaborator to your repo.
-2. Add a webhook with the url `https://pull-to-master.herokuapp.com/webhook` and payload version of json
+1. Add [`pull-to-master-bot`](https://github.com/pull-to-master-bot) as a collaborator to your repository.
+2. Add a webhook with the url `https://pull-to-master.herokuapp.com/webhook` and payload version of `application/vnd.github.v3+json`
 
 ## How to set it up for yourself.
 
 ### On Heroku
 1. [Install Heroku](https://devcenter.heroku.com/articles/quickstart)
-2. Clone this application. `git clone https://github.com/teirte/pull-to-master.git; cd pull-to-master`
+2. Clone this application. `git clone https://github.com/terite/pull-to-master.git; cd pull-to-master`
 3. [Create a Heroku app](https://devcenter.heroku.com/articles/git) `heroku create`
 4. [Configure](https://devcenter.heroku.com/articles/config-vars). `heroku config:set GH_USER=... GH_PASS=...`
 5. Push to Heroku `git push heroku master`
 
 ### General setup
+
+This project requires a GitHub user to operate as. This can be your own user,
+or a user created specifically for this webhook.
+
+If you want to use a **personal access token** as a password, it needs to have
+scopes **repo** and **public_repo**.
 
 #### Requirements
 
