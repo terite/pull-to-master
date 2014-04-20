@@ -1,7 +1,9 @@
-## What it is
+## What does this project do?
 
-This is a webhook for GitHub that only allows pull requests into master. Pushes
-to master are moved to a branch, then a pull request is automatically created.
+This is a webhook that protects your master branch on GitHub from pushes. Only
+pull-requests will get into your master branch.
+
+Pushes to master are moved to a branch, then a pull request is automatically created.
 
 ## How to use it
 
@@ -12,13 +14,22 @@ This is the easy way (that gives me access to anything).
 
 ## How to set it up for yourself.
 
-### Requirements
+### On Heroku
+1. [Install Heroku](https://devcenter.heroku.com/articles/quickstart)
+2. Clone this application. `git clone https://github.com/teirte/pull-to-master.git; cd pull-to-master`
+3. [Create a Heroku app](https://devcenter.heroku.com/articles/git) `heroku create`
+4. [Configure](https://devcenter.heroku.com/articles/config-vars). `heroku config:set GH_USER=... GH_PASS=...`
+5. Push to Heroku `git push heroku master`
+
+### General setup
+
+#### Requirements
 
 * Recent version of node.js.
 * GitHub user with access to your repositories
 * Some Node.js host. I use Heroku, others work too.
 
-### Setup
+#### Setup
 
 1. Set environment variables `GH_USER` and `GH_PASS` to your github user's
 username and password. This user needs to have permission to all
