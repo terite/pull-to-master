@@ -1,0 +1,21 @@
+{
+  "name": "pull-to-master",
+  "version": "1.0.0",
+  "description": "Only allow pull requests into your github master branch",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/terite/pull-to-master.git"
+  },
+  "author": "David Stensland <pull-to-master@terite.com>",
+  "license": "https://i.imgur.com/k6sAKqj.gif",
+  "bugs": {
+    "url": "https://github.com/terite/pull-to-master/issues"
+  },
+  "dependencies": {
+    "github": "^0.1.16",
+    "async": "^0.7.0"
+  }
+}
