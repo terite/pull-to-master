@@ -8,7 +8,7 @@ to master are moved to a branch, then a pull request is automatically created.
 This is the easy way (that gives me access to anything).
 
 1. Add `pull-to-master-bot` as a collaborator to your repo.
-2. Add a webhook with the url `https://pull-to-master.herokuapp.com`
+2. Add a webhook with the url `https://pull-to-master.herokuapp.com/webhook` and payload version of json
 
 ## How to set it up for yourself.
 
